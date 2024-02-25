@@ -1844,7 +1844,7 @@ traceResult xTraceGetEventBuffer(void** ppvBuffer, TraceUnsignedBaseType_t * pui
 
 #define vTraceExcludeTask(handle) (void)(handle)
 
-#define vTraceConsoleChannelPrintF(fmt, ...) (void)(fmt)
+//#define vTraceConsoleChannelPrintF(fmt, ...) (void)(fmt)
 
 #ifndef TRC_ALLOC_CUSTOM_BUFFER
 #define TRC_ALLOC_CUSTOM_BUFFER(bufname)
