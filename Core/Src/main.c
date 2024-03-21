@@ -187,7 +187,7 @@ uint32_t ADC_GetAverageValue(ADC_HandleTypeDef* hadc, int numOfReadings)
 	{
 		if (i == minIndex || i == maxIndex)
 		{
-
+      sum += 0;
 		}
 		else
 		{
@@ -295,12 +295,12 @@ long constrain(long x, long out_min, long out_max)
 {
 	if (x < out_min)
 	{
-		x = out_min;
+		return out_min;
 	}
 
 	if (x > out_max)
 	{
-		x = out_max;
+		return out_max;
 	}
 
 	return x;
@@ -389,6 +389,8 @@ void torqueControl()
 			 torqueRefLimit = map(torqueRefLimit, 110, 127, 5000, 4500);
 		 }
 	}
+
+
 
 	torqueControlMessage(&torqueRefLimit, &SPEED_REF_LIMIT);
 }
